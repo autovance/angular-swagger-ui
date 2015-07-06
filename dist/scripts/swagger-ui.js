@@ -87,7 +87,7 @@ angular
 				if (!swagger.tags) {
 					resources.push({
 						name: 'default',
-						open: true
+						open: false
 					});
 					map['default'] = 0;
 				} else {
