@@ -93,6 +93,7 @@ angular
 				} else {
 					for (var i = 0, l = swagger.tags.length; i < l; i++) {
 						var tag = swagger.tags[i];
+            tag.open = false;
 						resources.push(tag);
 						map[tag.name] = i;
 					}
@@ -174,7 +175,7 @@ angular
 						res.operations = res.operations || [];
 						res.operations.push(operation);
 						if (operation.open) {
-							res.open = true;
+							res.open = false;
 						}
 						operationId++;
 					}
